@@ -62,11 +62,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <?php endif ?>
                 <ul class="todo-list">
                     <?php foreach ($todos as $t) : ?>
-                        <li class="todo-item <?= $t['done'] ? 'low-opacity':''?>">
+                        <li class="todo-item <?= $t['done'] ? 'low-opacity' : '' ?>">
                             <span class="todo-name"><?php echo $t['name'] ?></span>
                             <a href="/edit-todo.php?id=<?= $t['id'] ?>">
-                                <button class="btn btn-primary"> <?= $t['done']? 'Annuler':'Valider'?></button></a>
-                            <button class="btn btn-danger">Supprimer</button>
+                                <button class="btn btn-primary"> <?= $t['done'] ? 'Annuler' : 'Valider' ?></button></a>
+                            <a href="/supprime-todo.php?id=<?= $t['id']?> ">
+                                <button class="btn btn-danger">Supprimer</button></a>
                         </li>
                     <?php endforeach; ?>
                 </ul>

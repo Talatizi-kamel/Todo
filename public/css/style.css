@@ -165,3 +165,7 @@ footer {
   flex: 1;
   margin-right: 0.5rem;
 }
+
+.low-opacity{
+  opacity: 0.5;
+}
